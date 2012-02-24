@@ -7,10 +7,11 @@ $link-color: #09c;
 body {
 	background: 	#ffffff;
     font-family:	'Skolar Regular', sans-serif;
+	text-align: 	center;
 }
 
 nav {
-  float: right;
+  float: bottom;
   background-color: white;
   padding: 0 0.7em;
   white-space: nowrap;
@@ -30,10 +31,6 @@ nav {
 
         &:visited {
           color: $link-color;
-        }
-
-        &:hover {
-          text-decoration: underline;
         }
       }
     }
