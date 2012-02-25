@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= @title %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li><%= link_to "Home", "http://www.youtube.com/watch?v=oHg5SJYRHA0" %></li>
-				<li><%= link_to "About", 'http://www.youtube.com/watch?v=oHg5SJYRHA0' %></li>
-				<li><%= link_to "Contact", 'http://www.youtube.com/watch?v=oHg5SJYRHA0' %></li>
-			</ul>
-		</nav>
-	</header>
+  <div class="container">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <li><%= link_to "Home", "http://www.youtube.com/watch?v=oHg5SJYRHA0" %></li>
+            <li><%= link_to "About", 'http://www.youtube.com/watch?v=oHg5SJYRHA0' %></li>
+            <li><%= link_to "Contact", 'http://www.youtube.com/watch?v=oHg5SJYRHA0' %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 	<%= yield %>
 </body>
 </html>
