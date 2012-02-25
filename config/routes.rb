@@ -1,4 +1,6 @@
 Site::Application.routes.draw do
+  resources :users
+  
   match '/signup',  to: 'users#new' 
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
