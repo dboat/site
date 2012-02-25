@@ -5,8 +5,10 @@ class StaticPagesController < ApplicationController
   end
 
   def about
+    @title = "About UCLA Dragon Boat"
   end
 
   def contact
+    @title = "Contact UCLA Dragon Boat"
   end
 end
