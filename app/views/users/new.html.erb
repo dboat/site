@@ -1,27 +1,31 @@
-<h1>Sign up</h1>
+<div class="container">
+  <div class="hero-unit">
+<h2>Sign up</h2>
 
 <%= form_for(@user) do |f| %>
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email %>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :phone %><br />
+    <%= f.label :phone %>
     <%= f.text_field :phone %>
   </div>
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password %>
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation, "Confirmation" %><br />
+    <%= f.label :password_confirmation, "Confirmation" %>
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
+  </div>
+</div>
