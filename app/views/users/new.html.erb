@@ -1,8 +1,8 @@
-<div class="container">
-  <div class="hero-unit">
+<div id="signup-form">
 <h2>Sign up</h2>
 
-<%= form_for(@user) do |f| %>
+
+<%= form_for(@user, html: {class: "form-vertical"}) do |f| %>
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -27,5 +27,4 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
-  </div>
 </div>
