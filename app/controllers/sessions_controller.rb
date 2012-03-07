@@ -9,10 +9,13 @@ class SessionsController < ApplicationController
       redirect_to user
     else
       flash[:error] = "Invalid email/password combination"
+      "flash stays even when you switch to a different part of the site"
       render 'new'
     end
   end
   
   def destroy
+    sign_out
+    redirect_to root_path
   end
 end

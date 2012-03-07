@@ -1,8 +1,8 @@
 <% flash.each do |key, value| %>
 	<div class="alert alert-<%= key %>"><%= value %></div>
 <% end %>
-<h1>
+<h2>
 	Welcome <%= @user.name %>
-</h1>
+</h2>
 	<%= gravatar_for @user %>
 <p>Here is your personal profile page.</p>
