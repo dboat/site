@@ -1,7 +1,12 @@
 Site::Application.routes.draw do
+  resources :sessions, only: [:new, :create, :destroy]
   resources :users
-  match '/allusers', to: 'users#index'
-  match '/signup',  to: 'users#new' 
+  
+  match '/allusers',  to: 'users#index'
+  
+  match '/signin',    to: 'sessions#new'
+  match '/signout',   to: 'sessions#destroy', via: :delete
+  match '/signup',    to: 'users#new' 
   
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'

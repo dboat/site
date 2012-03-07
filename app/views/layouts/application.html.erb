@@ -10,11 +10,12 @@
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container">
+					<%= link_to "UCLA Dragon Boat", root_path, class: "brand" %>
           <ul class="nav">
-            <li><%= link_to "Home", root_path %></li>
+						<li><%= link_to "Home", root_path %></li>
             <li><%= link_to "About", about_path %></li>
             <li><%= link_to "Contact", contact_path %></li>
-			<li><%= link_to "Login", signup_path %></li>
+						<li><%= link_to "Login", signin_path %></li>
 			<!--
 			<li class="dropdown" id="menu1">
 			    <a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
@@ -36,6 +37,9 @@
   </div>
   <div class="container">
     <div class="hero-unit">
+	  <% flash.each do |key, value| %>
+		<div class="alert alert-<%= key %>"><%= value %></div>
+	  <% end %>
 	  <%= yield %>
     </div>
   </div>
