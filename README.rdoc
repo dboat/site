@@ -1,3 +1,6 @@
 How to compare two different commits
 1) Use "git log" and determine hash code of each commit
 2) Use "git diff <before> <after>"
+
+Ideas:
+Voting system for ideas for socials

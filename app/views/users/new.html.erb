@@ -1,7 +1,6 @@
 <div id="signup-form">
+<%= render 'shared/error_messages' %>
 <h2>Sign up</h2>
-
-
 <%= form_for(@user, html: {class: "form-vertical"}) do |f| %>
   <div class="field">
     <%= f.label :name %>
@@ -27,6 +26,5 @@
 	<%= submit_tag "Sign up", class: "btn btn-primary", type: "submit" %>
   </div>
 <% end %>
-
 <p>Already registered? <%= link_to "Sign in now!", signin_path %></p>
 </div>
