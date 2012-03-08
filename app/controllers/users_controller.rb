@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_filter :signed_in_user,  only: [:index, :edit, :show, :update]
-  before_filter :admin_user,      only: [:destroy, :edit, :update, :index]
   before_filter :correct_user,    only: [:edit, :update]
+  before_filter :admin_user,      only: [:destroy, :index]
   
   def show
     @user = User.find(params[:id])
@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   end
   
   def create
+    params[:user][:email].downcase!
     @user = User.new(params[:user])
     if @user.save
       sign_in(@user)
@@ -59,7 +60,7 @@ class UsersController < ApplicationController
     
     def correct_user
       @user = User.find(params[:id])
-      if not current_user.admin? and not current_user?(@user)
+      if not current_user?(@user)
         redirect_to root_path
       end
     end
