@@ -4,17 +4,16 @@
 		<!-- <%= gravatar_for @user %> -->
 		<ul class="nav nav-list">
 			<li class="nav-header">Dragon Boat</li>
-			<li><%= link_to "News", "#" %></li>
-			<li><%= link_to "Weekly Workouts", "#" %></li>
-			<li><%= link_to "Coaches' Comments", "#" %></li>
-			<li><%= link_to "Practice", "#" %></li>
+			<li><a href="#"><i class="icon-list-alt"></i> News</li>
+			<li><a href="#"><i class="icon-heart"></i> Weekly Workouts</li>
+			<li><a href="#"><i class="icon-comment"></i> Coaches' Comments</li>
 			<li class="nav-header">Social</li>
-			<li><%= link_to "Assassins", "#" %></li>
-			<li><%= link_to "Upcoming Events", "#" %></li>
-			<li><%= link_to "Suggestion Box", "#" %></li>
+			<li><a href="#"><i class="icon-screenshot"></i> Assasins</li>
+			<li><a href="#"><i class="icon-calendar"></i> Upcoming Events</li>
+			<li><a href="#"><i class="icon-gift"></i> Suggestion Box</li>
 			<li class="nav-header">Miscellaneous</li>
-			<li><%= link_to "Settings", edit_user_path(current_user) %></li>
-			<li><%= link_to "Team Blog", "#" %></li>
+			<li><a href="<%= edit_user_path(current_user) %>"><i class="icon-cog"></i> Settings</li>
+			<li><a href="#"><i class="icon-book"></i> Team Blog</li>
 		</ul>
 		</div>
 	</div>
