@@ -1,4 +1,10 @@
-<h1>Edit user</h1>
+<div class="row-fluid">
+	<div class="span3">
+		<%= render 'shared/sidebar'%>
+	</div>
+	<div class="span8">
+		<div class="well">
+<h1>Change settings</h1><br />
 <%= render 'shared/error_messages' %>
 <%= form_for(@user) do |f| %>
   <div class="field">
@@ -25,8 +31,6 @@
     <%= submit_tag "Update", class: "btn btn-primary", type: "submit" %>
   </div>
 <% end %>
-
-<div>
-  <%= gravatar_for(@user) %>
-  <a href="http://gravatar.com/emails">change</a>
+</div>
+</div>
 </div>

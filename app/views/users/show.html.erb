@@ -1,21 +1,6 @@
 <div class="row-fluid">
 	<div class="span3">
-		<div class="well sidebar-nav">
-		<!-- <%= gravatar_for @user %> -->
-		<ul class="nav nav-list">
-			<li class="nav-header">Dragon Boat</li>
-			<li><a href="#"><i class="icon-list-alt"></i> News</a></li>
-			<li><a href="#"><i class="icon-heart"></i> Weekly Workouts</a></li>
-			<li><a href="#"><i class="icon-comment"></i> Coaches' Comments</a></li>
-			<li class="nav-header">Social</li>
-			<li><a href="#"><i class="icon-screenshot"></i> Assasins</a></li>
-			<li><a href="#"><i class="icon-calendar"></i> Upcoming Events</a></li>
-			<li><a href="#"><i class="icon-gift"></i> Suggestion Box</a></li>
-			<li class="nav-header">Miscellaneous</li>
-			<li><a href="<%= edit_user_path(current_user) %>"><i class="icon-cog"></i> Settings</a></li>
-			<li><a href="#"><i class="icon-book"></i> Team Blog</a></li>
-		</ul>
-		</div>
+		<%= render 'shared/sidebar'%>
 	</div>
 	<div class="span8">
 		<div class="well">
