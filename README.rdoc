@@ -4,3 +4,4 @@ How to compare two different commits
 
 Ideas:
 Voting system for ideas for socials
+Gym and Weekly Assignment

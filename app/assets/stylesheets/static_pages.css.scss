@@ -1,37 +1,6 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-$link-color: #09c;
-
-body {
-    font-family:	'Skolar Regular', sans-serif;
+.front-page {
 	text-align: center;
-}
-
-nav {
-  float: bottom;
-  background-color: white;
-  padding: 0 0.7em;
-  white-space: nowrap;
-
-  ul {
-    margin: 0;
-    padding: 0;
-
-    li {
-      list-style-type: none;
-      display: inline-block;
-      padding: 0.2em 0;
-
-      a {
-        padding: 0 5px;
-        font-weight: bold;
-
-        &:visited {
-          color: $link-color;
-        }
-      }
-    }
-  }
 }

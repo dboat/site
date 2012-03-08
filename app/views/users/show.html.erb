@@ -1,5 +1,31 @@
-<h2>
-	Welcome <%= @user.name %>
-</h2>
-	<%= gravatar_for @user %>
-<p>Here is your personal profile page.</p>
+<div class="row-fluid">
+	<div class="span4">
+		<div class="well sidebar-nav">
+		<!-- <%= gravatar_for @user %> -->
+		<ul class="nav nav-list">
+			<li class="nav-header">Dragon Boat</li>
+			<li><%= link_to "News", "#" %></li>
+			<li><%= link_to "Weekly Workouts", "#" %></li>
+			<li><%= link_to "Coaches' Comments", "#" %></li>
+			<li><%= link_to "Practice", "#" %></li>
+			<li class="nav-header">Social</li>
+			<li><%= link_to "Assassins", "#" %></li>
+			<li><%= link_to "Upcoming Events", "#" %></li>
+			<li><%= link_to "Suggestion Box", "#" %></li>
+			<li class="nav-header">Miscellaneous</li>
+			<li><%= link_to "Settings", edit_user_path(current_user) %></li>
+			<li><%= link_to "Team Blog", "#" %></li>
+		</ul>
+		</div>
+	</div>
+	<div class="span8">
+		<div class="well">
+		<div class="profile-info">
+		<h2>
+			Welcome <%= @user.name %>
+		</h2>
+		<p>Here is your personal profile page.</p>
+		</div>
+		</div>
+	</div>
+</div>
