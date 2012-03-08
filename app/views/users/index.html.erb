@@ -1,15 +1,23 @@
 <h2>List of Users</h2>
-<table class="table table-striped">
-	<tr>
-		<th>Name</th>
-		<th>Email</th>
-		<th>Phone</th>
-	</tr>
-	<% @users.each do |user| %>
-	<tr>
-		<td><%= user.name %></td>
-		<td><%= user.email %></td>
-		<td><%= user.phone %></td>
-	</tr>
-	<% end %>
-</table>
+<% if @users.empty? %>
+	<div class="alert alert-block">
+	<h4 class="alert-heading">No users!</h4>
+	</div>
+<% else %>
+	<table class="table table-striped">
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Phone</th>
+			<th>Options</th>
+		</tr>
+		<% @users.each do |user| %>
+		<tr>
+			<td><%= user.name %></td>
+			<td><%= user.email %></td>
+			<td><%= user.phone %></td>
+			<td><%= link_to "Delete", user, method: :delete, confirm: "You sure?", class: "btn btn-mini btn-danger"%></td>
+		</tr>
+		<% end %>
+	</table>
+<% end %>
