@@ -7,13 +7,16 @@
 </head>
 <body>
   <%= render 'layouts/header' %>
+	<div class="wrapper">
   <div class="container-fluid">
 	  <% flash.each do |key, value| %>
-		<div class="alert alert-<%= key %>"><%= value %></div>
+			<div class="alert alert-<%= key %>"><%= value %></div>
 	  <% end %>
 	  <%= yield %>
-		<%= render 'layouts/footer' %>
+		<div class="push"></div>
 		<!-- <%= debug(params) if Rails.env.development? %> -->
-  </div>
+  	<%= render 'layouts/footer' %>
+	</div>
+	</div>
 </body>
 </html>
